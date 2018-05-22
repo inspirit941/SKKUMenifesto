@@ -1,15 +1,42 @@
+<script>
+$(document).ready(function(){
+    $(".toggle").click(function(){
+        $(".thiss").toggle();
+    });
+});
+</script>
+
 <body class="is-loading">
 	<div id="wrapper" class="fade-in">
 		<div id="main">
-			<!--<center><h1>S-Wing</h1></center>-->
-
+			<center>
+				<li class="button special toggle">출처 확인</li>
+				<br><br>
+				<div class ="thiss" style="display:none;">
+					<ul class="actions">
+						<% arr1 = (51..54).to_a.map{ |x| 'http://www.skkuw.com/news/articleView.html?idxno=116'+ x.to_s } %>
+						<% arr2 = ['복지','소통','문화','등록금/교육'] %>
+						<% arr3 = [arr1, arr2] %>
+						<% for i in (0..3) %>
+								<li><%= link_to  arr3[1][i] , arr3[0][i].to_s, target: "_blank", class: "button special" %></li>
+						<% end %>
+					<br>
+					<br>
+					<h6>성대신문 작성 시점인 2014.11.30일 기준입니다.</h6>
+					<h6>2014년은 공약 카테고리를 기준으로 한 기사에<br> 양 캠퍼스의 공약이 있습니다.</h6>				
+					</ul>
+				</div>
+			</center>
 		    <div class="row">
-		    	<a href="<%= y14s_gun_path %>" class="button actions" style="float:right;margin-left:10px;">공 통</a>  
-							<a href="<%= y14s_gunsuw_path %>" class="button actions" style="float:right">자과캠</a>
-							<br>
 				<div class="6u 12u$(small)">
-							
 					<div class="table-wrapper">
+						<div class="actions">
+							<center>
+								<a href="<%= y14s_gun_path %>" class="button actions">공 통</a>
+								<a href="<%= y14s_gunsuw_path %>" class="button actions">자과캠</a>
+								<br><br>
+							</center>
+						</div>
 					<% @years.each do |year| %>
 						<% if year.name == 2014 %>
 								<% year.locations.each do |l1| %>
@@ -21,17 +48,16 @@
 										<table class="table">
 											<thead class="thead-light">
 												<tr>
-													 <th scope="col">#</th>
-													 <th scope="col">공약</th>
-													 <th scope="col">시행여부</th>
-													 <th scope="col">Detail</th>
+													<th scope="col" width = "35%">공약</th>
+													 <th scope="col" width = "3%">#</th>
+													 <th scope="col" width = "60%">Detail</th>
 												</tr>
 											</thead>
 											<% i=1%>
 										<% ct.contents.each_slice(2) do |slice1, slice2| %>
 													  <tbody>
 													    <tr>
-													      <th scope="row"><%=i%></th>
+													      <!--<th scope="row"><%=i%></th>-->
 													      <td><%=slice1.name%></td>
 													      <td><%=slice1.enforce%></td>
 													      <td><% if slice1.detail %><%=slice1.detail %><% end%></td>
@@ -39,7 +65,7 @@
 													    <%i+=1%>
 													    <% if slice2%>
 														<tr>
-													      <th scope="row"><%=i%></th>
+													      <!--<th scope="row"><%=i%></th>-->
 													      <td><%=slice2.name%></td>
 													      <td><%=slice2.enforce%></td>
 													      <td><% if slice2.detail %><%=slice2.detail %><% end%></td>
@@ -50,8 +76,6 @@
 											<%end%>
 											</tbody>
 											</table>
-											<hr>
-									
 										
 										<%end%>
 									<%end%>

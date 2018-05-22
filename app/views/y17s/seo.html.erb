@@ -1,9 +1,20 @@
+<script>
+$(document).ready(function(){
+    $(".toggle").click(function(){
+        $(".thiss").toggle();
+    });
+});
+</script>
+
 <body class="is-loading">
 
 	<div id="wrapper" class="fade-in">
 		<div id="main">
 
 			<center>
+				<li class="button special toggle">출처 확인</li>
+				<br><br>
+				<div class ="thiss" style="display:none;">
 				<ul class="actions">
 			
 			<% arr1 = (79..88).to_a.map{ |x| 'http://www.skkuw.com/news/articleView.html?idxno=131'+ x.to_s } %>
@@ -13,9 +24,10 @@
 					<li><%= link_to  arr3[1][i] , arr3[0][i].to_s, target: "_blank", class: "button special" %></li>
 			<% end %>
 				<br>
-				<br>
+				<h6>하단의 데이터는 성대신문 자료를 인용한 것입니다.</h6>
 				<h6>성대신문 작성 시점인 2017.08.29일 기준입니다.</h6>
 				</ul>
+				</div>
 			</center>
 
 
@@ -32,17 +44,17 @@
 										<table class="alt">
 											<thead class="thead-light">
 												<tr>
-													 <th scope="col">#</th>
-													 <th scope="col">공약</th>
-													 <th scope="col">시행여부</th>
-													 <th scope="col">Detail</th>
+													 <!--<th scope="col">#</th>-->
+													 <th scope="col" width = "35%">공약</th>
+													 <th scope="col" width = "3%">#</th>
+													 <th scope="col" width = "60%">Detail</th>
 												</tr>
 											</thead>
 											<% i=1%>
 										<% c2.content2s.each_slice(2) do |slice1, slice2| %>
 													  <tbody>
 													    <tr>
-													      <th scope="row"><%=i%></th>
+													      <!--<th scope="row"><%=i%></th>-->
 													      <td><%=slice1.name%></td>
 													      <td><%=slice1.enforce%></td>
 													      <td><% if slice1.detail %><%=slice1.detail %><% end%></td>
@@ -50,7 +62,7 @@
 													    <%i+=1%>
 													    <% if slice2%>
 														<tr>
-													      <th scope="row"><%=i%></th>
+													      <!--<th scope="row"><%=i%></th>-->
 													      <td><%=slice2.name%></td>
 													      <td><%=slice2.enforce%></td>
 													      <td><% if slice2.detail %><%=slice2.detail %><% end%></td>

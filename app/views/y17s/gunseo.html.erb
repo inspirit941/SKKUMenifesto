@@ -1,22 +1,37 @@
+<script>
+$(document).ready(function(){
+    $(".toggle").click(function(){
+        $(".thiss").toggle();
+    });
+});
+</script>
+
 <body class="is-loading">
 	<div id="wrapper" class="fade-in">
 		<div id="main">
-			<center><ul class="actions">
+			<center>
+				<li class="button special toggle">출처 확인</li>
+				<br><br>
+				<div class ="thiss" style="display:none;">
+				<ul class="actions">
 				<li><a href='http://www.skkuw.com/news/articleView.html?idxno=13354' class="button special"  target="_blank">공통</a></li>
 				<li><a href='http://www.skkuw.com/news/articleView.html?idxno=13353' class="button special"  target="_blank">인사캠</a></li>
 				<li><a href='http://www.skkuw.com/news/articleView.html?idxno=13350' class="button special"  target="_blank">자과캠</a></li>
-				<br>
-				<br>
-				<h6>성대신문 작성 시점인 2016.11.03일 기준입니다.</h6>
-				<h6></h6>
-			</ul></center>
+				<br><br>
+				<h6>성대신문 작성 시점인 2017.11.13일 기준입니다.</h6>
+				</ul>
+				</div>
+			</center>
 		    <div class="row">
-		    	<a href="<%= y17s_gun_path %>" class="button actions" style="float:right;margin-left:10px;">공 통</a>  
-							<a href="<%= y17s_gunsuw_path %>" class="button actions" style="float:right">자과캠</a>
-							<br>
+		    				
 				<div class="6u 12u$(small)">
 							
 				<div class="table-wrapper">
+					<center>
+		    	<a href="<%= y17s_gun_path %>" class="button actions" >공 통</a>  
+				<a href="<%= y17s_gunsuw_path %>" class="button actions" >자과캠</a>
+							<br>
+				</center><br>
 					<% @years.each do |year| %>
 						<% if year.name == 2017 %>
 								<% year.locations.each do |l1| %>
@@ -28,17 +43,17 @@
 										<table class="table">
 											<thead class="thead-light">
 												<tr>
-													 <th scope="col">#</th>
-													 <th scope="col">공약</th>
-													 <th scope="col">시행여부</th>
-													 <th scope="col">Detail</th>
+													 <!--<th scope="col">#</th>-->
+													 <th scope="col" width = "35%">공약</th>
+													 <th scope="col" width = "3%">#</th>
+													 <th scope="col" width = "60%">Detail</th>
 												</tr>
 											</thead>
 											<% i=1%>
 										<% ct.contents.each_slice(2) do |slice1, slice2| %>
 													  <tbody>
 													    <tr>
-													      <th scope="row"><%=i%></th>
+													      <!--<th scope="row"><%=i%></th>-->
 													      <td><%=slice1.name%></td>
 													      <td><%=slice1.enforce%></td>
 													      <td><% if slice1.detail %><%=slice1.detail %><% end%></td>
@@ -46,29 +61,23 @@
 													    <%i+=1%>
 													    <% if slice2%>
 														<tr>
-													      <th scope="row"><%=i%></th>
+													      <!--<th scope="row"><%=i%></th>-->
 													      <td><%=slice2.name%></td>
 													      <td><%=slice2.enforce%></td>
 													      <td><% if slice2.detail %><%=slice2.detail %><% end%></td>
 													    </tr>
 													    <%i+=1%>
 													  <%end%>
-												
 											<%end%>
 											</tbody>
 											</table>
-											<hr>
-									
 										
 										<%end%>
 									<%end%>
 								<%end%>
 							<%end%>
 						<% end%>
-			
-				
-				    	
-        
+
 					</div>
 				</div>
 			</div>

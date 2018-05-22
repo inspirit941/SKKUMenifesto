@@ -1,12 +1,12 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+// @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 	
-@import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
+// @import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
 	
-@import url(https://fonts.googleapis.com/earlyaccess/kopubbatang.css);
-@import url(https://fonts.googleapis.com/earlyaccess/jejugothic.css);
+// @import url(https://fonts.googleapis.com/earlyaccess/kopubbatang.css);
+// @import url(https://fonts.googleapis.com/earlyaccess/jejugothic.css);
 // 폰트설정
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+// @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 /*
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
@@ -14,11 +14,20 @@
 */
 
 /* Reset */
-
+@font-face{
+	font-family:"NanumGothic";
+	src:url('/assets/fonts/NanumGothic.otf')
+}
+@font-face{
+	font-family:"MalgunGothic";
+	src:url('/assets/fonts/MalgunGothic.ttf')
+}
 /*심시은 임의수정: .image.main img의 이미지 사이즈 변경
 		.image.main의 margin,width 변경}*/
 
-
+*{
+	font-family:'MalgunGothic';
+}
 
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -116,7 +125,7 @@
 	}
 
 	.row > * {
-		padding: 0 0 0 1.5rem;
+		// padding: 0 0 0 1.5rem;
 	}
 
 	.row {
@@ -329,7 +338,7 @@
 	@media screen and (max-width: 1680px) {
 
 		.row > * {
-			padding: 0 0 0 1.5rem;
+			// padding: 0 0 0 1.5rem;
 		}
 
 		.row {
@@ -544,7 +553,7 @@
 	@media screen and (max-width: 1280px) {
 
 		.row > * {
-			padding: 0 0 0 1.5rem;
+			// padding: 0 0 0 1.5rem;
 		}
 
 		.row {
@@ -759,7 +768,7 @@
 	@media screen and (max-width: 980px) {
 
 		.row > * {
-			padding: 0 0 0 1.5rem;
+			// padding: 0 0 0 1.5rem;
 		}
 
 		.row {
@@ -974,7 +983,7 @@
 	@media screen and (max-width: 736px) {
 
 		.row > * {
-			padding: 0 0 0 1.5rem;
+			// padding: 0 0 0 1.5rem;
 		}
 
 		.row {
@@ -1189,7 +1198,7 @@
 	@media screen and (max-width: 480px) {
 
 		.row > * {
-			padding: 0 0 0 1.5rem;
+			// padding: 0 0 0 1.5rem;
 		}
 
 		.row {
@@ -1404,7 +1413,7 @@
 	@media screen and (max-width: 360px) {
 
 		.row > * {
-			padding: 0 0 0 1.5rem;
+			// padding: 0 0 0 1.5rem;
 		}
 
 		.row {
@@ -1684,7 +1693,7 @@
 	}
 
 	body, input, select, textarea {
-		font-family: 'Nanum Gothic', serif;
+		// font-family: 'Nanum Gothic', serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 2.375;
@@ -1713,11 +1722,11 @@
 
 	p {
 		text-align: justify;
-		margin: 0 0 2rem 0;
+		margin: 0 0 0 0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Nanum Gothic', serif;
+		// font-family: 'Nanum Gothic', serif;
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
@@ -1901,7 +1910,7 @@
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
-		font-family: 'Nanum Gothic', serif;
+		// font-family: 'Nanum Gothic', serif;
 		font-size: 0.8rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
@@ -2163,7 +2172,7 @@
 
 	label {
 		display: block;
-		font-family: 'Nanum Gothic', serif;
+		// font-family: 'Nanum Gothic', serif;
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
@@ -2828,7 +2837,7 @@
 
 	.table-wrapper {
 		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
+		// overflow-x: auto;
 	}
 
 	table {
@@ -2847,15 +2856,15 @@
 		}
 
 		table th {
-			font-family: 'Nanum Gothic', serif;
+			// font-family: 'Nanum Gothic', serif;
 			
-		
+			text-align: center;
 			font-size: 0.8rem;
 			font-weight: 900;
 			letter-spacing: 0.075em;
 			line-height: 1.5;
-			padding: 0 0.75rem 0.75rem 0.75rem;
-			text-align: left;
+			padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+			text-align: center;
 			text-transform: uppercase;
 		}
 
@@ -2876,7 +2885,7 @@
 		}
 
 		table.alt {
-			border-collapse: separate;
+			border-collapse: collapse;
 		}
 
 			table.alt tbody tr td {
@@ -2903,10 +2912,14 @@
 
 	table tbody tr {
 		border-color: #eeeeee;
+		
 	}
 
 		table tbody tr:nth-child(2n + 1) {
-			background-color: rgba(220, 220, 220, 0.25);
+			background-color: rgba(220, 220, 220, 0.25); //홀수 표 색상
+		}
+		table tbody tr:nth-child(2n) {
+			background-color:white; //짝수 표 색상
 		}
 
 	table th {
@@ -2922,7 +2935,7 @@
 	}
 
 	table.alt tbody tr td {
-		border-color: #eeeeee;
+		border-color: #eeeeee; //head제외 색상
 	}
 
 /* Pagination */
@@ -3108,7 +3121,7 @@
 /* Intro */
 	#intro {
 		color: #ffffff;
-		padding: 8rem 4rem 6rem 4rem ;
+		padding: 6rem 4rem 6rem 4rem ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
 		-ms-align-items: center;
@@ -3133,7 +3146,7 @@
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 100vh;
+		min-height: 120vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -3296,11 +3309,11 @@
 
 			#intro {
 				padding: 3rem 2rem 1rem 2rem ;
-				min-height: 80vh;
+				min-height: 60vh;
 			}
 
 				#intro h1 {
-					font-size: 3.25rem;
+					font-size: 2.75rem;
 					line-height: 1.1;
 					margin-bottom: 1rem;
 				}
@@ -3397,7 +3410,7 @@
 			border-style: none;
 			border-color: #ffffff;
 			border-width: 5px !important;
-			font-family: 'Hanna', serif;
+			// font-family: 'Hanna', serif;
 			font-size: 2.25rem;
 			font-weight: 900;
 			letter-spacing: 0.075em;
@@ -3966,7 +3979,7 @@
 		}
 
 			#footer table tbody tr:nth-child(2n + 1) {
-				background-color: rgba(220, 220, 220, 0.5);
+				background-color: rgba(220, 220, 220, 0.5); 
 			}
 
 		#footer table th {
@@ -4324,7 +4337,7 @@
 		border: 0;
 		color: #ffffff;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 0.9rem;
+		font-size: 1.5rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
 		padding: 0.375rem 1.25rem;
@@ -4367,7 +4380,7 @@
 		@media screen and (max-width: 736px) {
 
 			#navPanelToggle {
-				font-size: 0.8rem;
+				font-size: 1.4rem;
 				padding: 0.25rem 1rem;
 			}
 
@@ -4456,8 +4469,8 @@
 			}
 
 			#navPanel .close:before {
-				content: '\f00d';
-				font-size: 1.25rem;
+				content: 'X';
+				font-size: 1.7rem;
 			}
 
 			#navPanel .close:hover {
