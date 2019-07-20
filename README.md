@@ -1,3 +1,8 @@
+heroku로 확인하는 방법
+
+https://verifypledge.herokuapp.com/
+
+skkupledgechaser.com으로 2017~2018 1년간 AWS로 Deploy해 운영하였음.
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
