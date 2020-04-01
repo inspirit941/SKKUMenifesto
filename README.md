@@ -2,7 +2,7 @@ heroku로 확인하는 방법
 
 https://verifypledge.herokuapp.com/
 
-![그림1](https://user-images.githubusercontent.com/26548454/78104672-937b4800-742a-11ea-894e-3dfc056fe1e2.png){: width="300" height="500"}
+<img src="https://user-images.githubusercontent.com/26548454/78104672-937b4800-742a-11ea-894e-3dfc056fe1e2.png" width="50%">
 
 skkupledgechaser.com으로 2018년 1년간 AWS로 Deploy해 운영하였음.
 
